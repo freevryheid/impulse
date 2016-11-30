@@ -1,4 +1,3 @@
-
 ##    Copyright (c) 2013 Randy Gaul http://RandyGaul.net
 ##
 ##    This software is provided 'as-is', without any express or implied
@@ -18,17 +17,14 @@
 ##
 ##    Port to Nim by Matic Kukovec https://github.com/matkuki/Nim-Impulse-Engine
 
-import 
-    math, 
+import
+    math,
     random
-
 
 const
     PI*: float = 3.141592741f
     EPSILON*: float = 0.0001f
     RAND_MAX*: float = 32767.0f
-
-
 
 ############
 ## Vector ##
@@ -99,7 +95,6 @@ proc normalize*(inVector: var Vec) =
         var invLen = 1.0f / len
         inVector.x *= invLen
         inVector.y *= invLen
-
 
 ############
 ## Matrix ##
@@ -207,8 +202,6 @@ proc biasGreaterThan*(a, b: float): bool =
         kBiasAbsolute = 0.01f
     result = a >= b * kBiasRelative + a * kBiasAbsolute
 
-
-
 ###########
 ## Other ##
 ###########
@@ -216,4 +209,3 @@ const
     gravityScale*: float32 = 5.0f
     gravity*: Vec = Vec(x: 0.0f, y: 10.0f * gravityScale)
     dt*: float = 1.0f / 60.0f
-
